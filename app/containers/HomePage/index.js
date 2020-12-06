@@ -6,13 +6,30 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
+// import { FormattedMessage } from 'react-intl';
+import { Row, Col } from 'react-bootstrap';
+// import messages from './messages';
+import NavbarHome from '../../components/Navbar';
+import SideBarButton from '../../components/SideBarButton';
 
 export default function HomePage() {
   return (
-    <h1>
-      <FormattedMessage {...messages.header} />
-    </h1>
+    <>
+      <NavbarHome />
+      <Row>
+        {/* sidebar */}
+        <Col sm="2" className="border">
+          <SideBarButton> SideBarButton </SideBarButton>
+          <h5>hellow</h5>
+          <h5>hellow</h5>
+          <h5>hellow</h5>
+          <h5>hellow</h5>
+        </Col>
+        {/* content */}
+        <Col sm="10" className="bg-secondary">
+          <h5>hellow content</h5>
+        </Col>
+      </Row>
+    </>
   );
 }
